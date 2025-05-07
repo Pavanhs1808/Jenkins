@@ -1,19 +1,9 @@
 ---
 - name: Deploy Maven Artifact
   hosts: localhost
-  become: no  # Root privileges may be required to access /opt
+  become: true  # Run tasks as root or a privileged user
   tasks:
-    - name: Create deployment directory if it does not exist
-      ansible.builtin.file:
-        path: /opt/deployment
-        state: directory
-        mode: '0755'
-
-    - name: Copy the artifact to the deployment directory
+    - name: Copy the artifact
       ansible.builtin.copy:
-        src: "/var/lib/jenkins/workspace/CalculatorApp/target/CalculatorApp-1.0-SNAPSHOT.jar"
-        dest: "/home/ai063f09-lr/myRepo/CalculatorApp-1.0-SNAPSHOT.jar"
-        mode: '0644'
-        
-        
-
+        src: /home/ai063f09-lr/myRepo/CalculatorApp-1.0-SNAPSHOT.jar
+        dest: /opt/deployment/CalculatorApp-1.0-SNAPSHOT.jar
