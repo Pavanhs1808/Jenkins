@@ -1,8 +1,8 @@
  - name: Deploy Maven Artifact
-  hosts: localhost
-  become: true
-  tasks:
-    - name: Copy artifact
-      ansible.builtin.copy:
-        src: /home/ai063f09-lr/CalculatorApp/target
-        dest: /opt/deployment/CalculatorApp/target
+   hosts: localhost
+   become: true
+   tasks:
+     - name: Copy artifact
+       ansible.builtin.copy:
+         src: /home/ai063f09-lr/CalculatorApp/target
+         dest: /opt/deployment/CalculatorApp/target
