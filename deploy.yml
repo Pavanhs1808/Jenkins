@@ -12,7 +12,7 @@
     - name: Copy the artifact to the deployment directory
       ansible.builtin.copy:
         src: "/var/lib/jenkins/workspace/CalculatorApp/target/CalculatorApp-1.0-SNAPSHOT.jar"
-        dest: "/opt/deployment/CalculatorApp-1.0-SNAPSHOT.jar"
+        dest: "/home/ai063f09-lr/myRepo/CalculatorApp-1.0-SNAPSHOT.jar"
         mode: '0644'
         
         
