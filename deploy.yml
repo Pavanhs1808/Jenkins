@@ -1,0 +1,10 @@
+---
+- name: Deploy Calculator App
+  hosts: localhost
+  tasks:
+    - name: Copy  .jar to/
+      copy:
+        
+        src: /home/ai063f09-lr/CalculatorApp/target/CalculatorApp-1.0-SNAPSHOT.jar
+        dest: /home/ai063f09-lr/myRepo/CalculatorApp-1.0-SNAPSHOT.jar
+        mode: '0755'
