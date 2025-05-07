@@ -1,10 +1,7 @@
----
-- name: Deploy Calculator App
-  hosts: localhost
+- name: Basic Server Setup
+  hosts: local
+  become: No
   tasks:
-    - name: Copy  .jar to/
-      copy:
-        
-        src: /home/ai063f09-lr/CalculatorApp/target/CalculatorApp-1.0-SNAPSHOT.jar
-        dest: /home/ai063f09-lr/myRepo/CalculatorApp-1.0-SNAPSHOT.jar
-        mode: '0755'
+    - name: Example task
+      debug:
+        msg: "Hello,basic"
