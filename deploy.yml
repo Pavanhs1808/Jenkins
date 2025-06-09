@@ -1,8 +1,8 @@
- - name: Deploy Maven Artifact
-   hosts: localhost
-   become: no
-   tasks:
-     - name: Copy artifact
-       ansible.builtin.copy:
-         src: /home/ai063f09-lr/CalculatorApp/target/CalculatorApp-1.0-SNAPSHOT.jar
-         dest: /opt/deployment/CalculatorApp-1.0-SNAPSHOT.jar
+
+- name: Basic Server Setup
+  hosts: local
+  become: true  # Optional: if your tasks need root access
+  tasks:
+    - name: Example task
+      debug:
+        msg: "Hello, this is a basic setup"
